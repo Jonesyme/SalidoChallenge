@@ -20,9 +20,10 @@ OK.  From a technical stand-point, the challenge was not overtly difficult or co
     - Tap filter button to filter by any Category using slide-out menu
     - Use the search bar to query wines via text
 
-## Whats Missing (Unfortunitely)
+## Whats Not fully complete
 - All shopping cart functionality
 - Sorting/paging of search results
+- Query employee PIN via email
 - Unit Tests
 
 ## 3rd Party Libraries Used
