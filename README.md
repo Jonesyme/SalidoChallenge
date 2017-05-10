@@ -2,7 +2,7 @@
 iOS Coding Challenge
 Author: Mike Jones
 
-OK.  From a technical stand-point, the challenge was not overtly difficult or complex but the sheer number of views and tables required to achieve the full feature set was rather large - at least in my experience.  Given another 48 hours I likely could have finished out the features but in the interest of time I have reduced the scope to the features outlined below.
+From a technical stand-point, the challenge was not overtly difficult or complex but the sheer number of custom views and tables required to achieve the full feature set was quite large - at least, in my experience.  Given another 48 hours I would be happy to finish out the features but in the interest of time I have reduced the scope to the features outlined below.  If you have any questions or you'd like to see me code a feature that's not in the current solution, don't be afraid to ask.
 
 ## Compilation Notes
 - Compiles on: XCode 8.3.2
