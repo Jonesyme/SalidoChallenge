@@ -1,7 +1,7 @@
 # SalidoChallenge
 iOS Coding Challenge
 
-OK.  From a technical stand-point, the challenge was not overtly difficult or complex but the sheer number of views and tables required to achieve the full feature set was rather large - at least in my experience.  Given another 48 hours I likely could have finished out the features but in the interest of time I have reduced the scope a bit the features outlines below.
+OK.  From a technical stand-point, the challenge was not overtly difficult or complex but the sheer number of views and tables required to achieve the full feature set was rather large - at least in my experience.  Given another 48 hours I likely could have finished out the features but in the interest of time I have reduced the scope to the features outlined below.
 
 ## Compilation Notes
 - Compiles on: XCode 8.3.2
