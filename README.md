@@ -7,3 +7,4 @@ Compiles on: XCode 8.3.2
 Language: Objective-C
 Target Devices: iPad Only
 Target Orientation: Landscape Only
+Target iOS Version: 10.3
