@@ -1,5 +1,6 @@
 # SalidoChallenge
 iOS Coding Challenge
+Author: Mike Jones
 
 OK.  From a technical stand-point, the challenge was not overtly difficult or complex but the sheer number of views and tables required to achieve the full feature set was rather large - at least in my experience.  Given another 48 hours I likely could have finished out the features but in the interest of time I have reduced the scope to the features outlined below.
 
@@ -8,22 +9,24 @@ OK.  From a technical stand-point, the challenge was not overtly difficult or co
 - Language: Objective-C
 - Target Device Family: iPad Only
 - Target Orientation: Landscape Only
-- Target OS: 10.3
+- Target OS: iOS 10.3
 
 ## What Features are Working
 - Almost all the Employee Account/PIN features
- - Create account
- - Search accounts
- - Login with PIN
+    - Create account
+    - Search accounts
+    - Login with PIN
 - The Wine Search and Filter Screen
- - Hit the Filter Button to Filter by any Categories
- - Use the SearchBar to query Wines via Text Search
+    - Tap filter button to filter by any Category using slide-out menu
+    - Use the search bar to query wines via text
 
 ## Whats Missing (Unfortunitely)
 - All shopping cart functionality
-- Checkout process
-- Payment process
-- Sorting of the search results
+- Sorting/paging of search results
 - Unit Tests
+
+## 3rd Party Libraries Used
+- JSONJoy for mapping data models to JSON responses
+- SWRevealViewController for slide-out master-detail like view hierarchy on search screen
 
 
