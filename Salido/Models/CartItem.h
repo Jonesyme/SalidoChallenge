@@ -17,7 +17,7 @@
 @property (atomic, strong) NSNumber * quantity;
 
 /**
- Essentially product-Price * quantity
+ Essentially retailprice * quantity
  */
 -(NSNumber *)itemSubTotal;
 

@@ -20,6 +20,13 @@
 @property (atomic, weak) Product * product; // data model object
 
 -(void)configureCellContent;
+/**
+ UIStepper action - increment/decrement quantity
+ */
+-(IBAction)valueDidChanged:(UIStepper *)sender;
+/**
+ Add product of selectecd quantity to shopping cart
+ */
 -(IBAction)addToCartTapped:(id)sender;
 
 @end

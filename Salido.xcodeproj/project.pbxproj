@@ -32,7 +32,6 @@
 		27D7D3221EC156940044EFF3 /* FilterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D3211EC156940044EFF3 /* FilterVC.m */; };
 		27D7D3251EC156A60044EFF3 /* SearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D3241EC156A60044EFF3 /* SearchVC.m */; };
 		27D7D32C1EC157030044EFF3 /* ShoppingCartVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D32B1EC157030044EFF3 /* ShoppingCartVC.m */; };
-		27D7D32F1EC1572F0044EFF3 /* CheckoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D32E1EC1572F0044EFF3 /* CheckoutVC.m */; };
 		27D7D3331EC157730044EFF3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D3321EC157730044EFF3 /* SWRevealViewController.m */; };
 		27D7D3361EC157B40044EFF3 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D3351EC157B40044EFF3 /* SearchTableViewCell.m */; };
 		27D7D3391EC157CA0044EFF3 /* FilterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 27D7D3381EC157CA0044EFF3 /* FilterTableViewCell.m */; };
@@ -103,8 +102,6 @@
 		27D7D3241EC156A60044EFF3 /* SearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchVC.m; sourceTree = "<group>"; };
 		27D7D32A1EC157030044EFF3 /* ShoppingCartVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartVC.h; sourceTree = "<group>"; };
 		27D7D32B1EC157030044EFF3 /* ShoppingCartVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartVC.m; sourceTree = "<group>"; };
-		27D7D32D1EC1572F0044EFF3 /* CheckoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutVC.h; sourceTree = "<group>"; };
-		27D7D32E1EC1572F0044EFF3 /* CheckoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutVC.m; sourceTree = "<group>"; };
 		27D7D3311EC157730044EFF3 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		27D7D3321EC157730044EFF3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		27D7D3341EC157B40044EFF3 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
@@ -361,8 +358,6 @@
 			children = (
 				27D7D32A1EC157030044EFF3 /* ShoppingCartVC.h */,
 				27D7D32B1EC157030044EFF3 /* ShoppingCartVC.m */,
-				27D7D32D1EC1572F0044EFF3 /* CheckoutVC.h */,
-				27D7D32E1EC1572F0044EFF3 /* CheckoutVC.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -489,7 +484,6 @@
 				272E3B671EBF18010041F2DE /* main.m in Sources */,
 				27D7D3361EC157B40044EFF3 /* SearchTableViewCell.m in Sources */,
 				27083AA31EC01DA100D8D238 /* AccountManager.m in Sources */,
-				27D7D32F1EC1572F0044EFF3 /* CheckoutVC.m in Sources */,
 				272E3B661EBF18010041F2DE /* AppDelegate.m in Sources */,
 				27D7D3251EC156A60044EFF3 /* SearchVC.m in Sources */,
 				27083AA71EC023FE00D8D238 /* CreateAccountVC.m in Sources */,

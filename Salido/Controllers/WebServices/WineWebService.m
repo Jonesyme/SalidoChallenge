@@ -72,8 +72,6 @@
         [params setObject:filterStr forKey:@"filter"];
     }
     
-    
-
     // perform network request
     [self asyncJSONRequestWithPath:@"catalog" parameters:params completion:^(NSDictionary *parsedJSONDict, NSError *error) {
         if(error!=nil ) {

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Cell to display total price of entire shopping cart at bottom of table view
+ */
 @interface ShoppingCartTotalCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *totalPriceLbl;
 -(void)configureCellContent;
