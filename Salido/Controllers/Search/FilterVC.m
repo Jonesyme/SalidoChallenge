@@ -78,7 +78,7 @@
     Category * topCategory = [_categoryList objectAtIndex:indexPath.section];
     SubCategory * subCategory = [topCategory.Refinements objectAtIndex:indexPath.row];
     if([self isCategorySelected:topCategory.Id subCatID:subCategory.Id]) {
-        [cell.textLabel setTextColor:[UIColor greenColor]];
+        [cell.textLabel setTextColor:[UIColor blueColor]];
     } else {
         [cell.textLabel setTextColor:[UIColor whiteColor]];
     }

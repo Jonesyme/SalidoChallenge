@@ -43,13 +43,14 @@
     [super viewWillAppear:animated];
     _TBSearchSpinner.hidden = true;
     _TBSearchBtn.hidden = false;
+    [_TBShoppingCartItemCountBtn setTitle:[[[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount] stringValue] forState:UIControlStateNormal];
 }
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [[ShoppingCartManager sharedInstance] setDelegate:self];
-    _TBShoppingCartItemCountBtn.titleLabel.text = [[[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount] stringValue];
 }
 -(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
     [[ShoppingCartManager sharedInstance] setDelegate:nil];
 }
 
