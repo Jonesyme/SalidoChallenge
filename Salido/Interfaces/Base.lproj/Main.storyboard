@@ -880,6 +880,9 @@
                                             <rect key="frame" x="821" y="40.5" width="94" height="29"/>
                                             <color key="backgroundColor" red="0.1815272064" green="0.1959828944" blue="0.20592084390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="valueDidChanged:" destination="c6P-5Z-WkH" eventType="valueChanged" id="JoA-a0-osN"/>
+                                            </connections>
                                         </stepper>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D50-U9-gPO">
                                             <rect key="frame" x="651" y="33" width="160" height="43.5"/>
@@ -937,7 +940,7 @@
                                 <rect key="frame" x="0.0" y="138" width="1366" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4xu-KI-6Jl" id="kXP-WV-Mqg">
-                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="89.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1366" height="90"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuT-Ja-Iwe">
@@ -1137,7 +1140,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="dWn-Cu-MJp">
-                                                    <rect key="frame" x="171.5" y="8" width="451" height="133.5"/>
+                                                    <rect key="frame" x="171.5" y="8" width="341.5" height="133.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                                     <color key="highlightedColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1151,7 +1154,7 @@
                                                         <action selector="addToCartTapped:" destination="hji-vk-wje" eventType="touchUpInside" id="BCC-Pf-JIO"/>
                                                     </connections>
                                                 </button>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAD-X4-syj">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAD-X4-syj">
                                                     <rect key="frame" x="1082.5" y="35" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.15168940359999999" green="0.15168940359999999" blue="0.15168940359999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -1164,13 +1167,16 @@
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <size key="shadowOffset" width="1" height="2"/>
                                                 </label>
-                                                <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Tl4-Dz-UNy">
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Tl4-Dz-UNy">
                                                     <rect key="frame" x="963.5" y="60" width="94" height="29"/>
                                                     <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <connections>
+                                                        <action selector="valueDidChanged:" destination="hji-vk-wje" eventType="valueChanged" id="d1Z-sz-CFc"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$19.99" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="I1k-fb-RZr">
-                                                    <rect key="frame" x="632.5" y="8" width="130" height="133.5"/>
+                                                    <rect key="frame" x="523" y="8" width="130" height="133.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="130" id="YuB-0C-LsI"/>
                                                     </constraints>
@@ -1186,7 +1192,7 @@
                                                 <constraint firstItem="Zjp-t5-i0r" firstAttribute="top" secondItem="OtQ-sL-5UG" secondAttribute="topMargin" id="2e3-1L-YxL"/>
                                                 <constraint firstItem="Zjp-t5-i0r" firstAttribute="leading" secondItem="OtQ-sL-5UG" secondAttribute="leadingMargin" constant="10" id="5F1-SA-kmf"/>
                                                 <constraint firstItem="I1k-fb-RZr" firstAttribute="leading" secondItem="dWn-Cu-MJp" secondAttribute="trailing" constant="10" id="E6c-4t-NTa"/>
-                                                <constraint firstItem="dWn-Cu-MJp" firstAttribute="width" secondItem="OtQ-sL-5UG" secondAttribute="width" multiplier="0.33" id="Qk0-E6-3ZK"/>
+                                                <constraint firstItem="dWn-Cu-MJp" firstAttribute="width" secondItem="OtQ-sL-5UG" secondAttribute="width" multiplier="0.25" id="Qk0-E6-3ZK"/>
                                                 <constraint firstItem="QAD-X4-syj" firstAttribute="centerY" secondItem="OtQ-sL-5UG" secondAttribute="centerY" id="UOO-Y5-kuW"/>
                                                 <constraint firstItem="QAD-X4-syj" firstAttribute="leading" secondItem="Tl4-Dz-UNy" secondAttribute="trailing" constant="25" id="cDC-Yc-VJH"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="I1k-fb-RZr" secondAttribute="bottom" id="dHd-vk-eto"/>

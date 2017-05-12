@@ -19,6 +19,7 @@
 @property (atomic, weak) CartItem * cartItem; // data model object
 
 -(void)configureCellContent;
+-(IBAction)valueDidChanged:(id)sender; // UIStepper action
 -(IBAction)deleteLineItem:(id)sender;
 
 @end
