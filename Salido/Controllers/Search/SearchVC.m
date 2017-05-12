@@ -14,6 +14,7 @@
 #import "FilterVC.h"
 #import "ProductDetailVC.h"
 #import "UIImage+DownloadImg.h"
+#import "ShoppingCartManager.h"
 
 @interface SearchVC ()
 -(void)reloadTableView;
@@ -41,7 +42,16 @@
     [super viewWillAppear:animated];
     _TBSearchSpinner.hidden = true;
     _TBSearchBtn.hidden = false;
+    _TBShoppingCartItemCountBtn.titleLabel.text = [[[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount] stringValue];
 }
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[ShoppingCartManager sharedInstance] setDelegate:self];
+}
+-(void)viewDidDisappear:(BOOL)animated {
+    [[ShoppingCartManager sharedInstance] setDelegate:nil];
+}
+
 -(void)executeSearchQuery {
     // show activity spinner
     [_searchBar resignFirstResponder];
@@ -138,4 +148,9 @@
     [self executeSearchQuery];
 }
 
+#pragma mark - ShoppingCartUpdateDelegate
+-(void)shoppingCartHasBeenUpdated:(ShoppingCartManager *)shoppingCartManager {
+    NSNumber * productCount = [[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount];
+    [_TBShoppingCartItemCountBtn setTitle:[productCount stringValue] forState:UIControlStateNormal];
+}
 @end

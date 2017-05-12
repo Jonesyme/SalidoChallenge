@@ -43,7 +43,9 @@
         }
     }
     // encode url string
+    NSLog(@"RawURL: %@", paramStr);
     NSString * encodedString = [paramStr stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.URLQueryAllowedCharacterSet];
+    NSLog(@"EncodedURL: %@", encodedString);
     NSURL * url = [NSURL URLWithString:encodedString];
     return url;
 }

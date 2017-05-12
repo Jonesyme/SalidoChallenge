@@ -7,6 +7,7 @@
 //
 
 #import "SearchTableViewCell.h"
+#import "ShoppingCartManager.h"
 
 @implementation SearchTableViewCell
 
@@ -26,7 +27,10 @@
 }
 
 -(IBAction)addToCartTapped:(id)sender {
-    
+    if(_product!=nil) {
+        int qty = [_qtyLbl.text intValue];
+        [[ShoppingCartManager sharedInstance] addLineItem:_product quantity:[NSNumber numberWithInt:qty]];
+    }
 }
 
 @end

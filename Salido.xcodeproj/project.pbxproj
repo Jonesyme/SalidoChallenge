@@ -22,6 +22,7 @@
 		272E3B7A1EBF4F900041F2DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272E3B781EBF4F900041F2DE /* Main.storyboard */; };
 		272E3B7F1EBF63A10041F2DE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 272E3B7E1EBF63A10041F2DE /* LoginVC.m */; };
 		27540C8A1EC3618B00BBD2F6 /* UIImage+DownloadImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 27540C891EC3618B00BBD2F6 /* UIImage+DownloadImg.m */; };
+		277562801EC5953200F98C73 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2775627F1EC5953200F98C73 /* CartItem.m */; };
 		27B81BA61EBC3BD400FE0C49 /* SalidoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81BA51EBC3BD400FE0C49 /* SalidoTests.m */; };
 		27BB672A1EC1B95D00875B19 /* ResponseStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BB67291EC1B95D00875B19 /* ResponseStatus.m */; };
 		27BB672C1EC1B96F00875B19 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BB672B1EC1B96F00875B19 /* Category.m */; };
@@ -78,6 +79,9 @@
 		272E3B7E1EBF63A10041F2DE /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
 		27540C881EC3618B00BBD2F6 /* UIImage+DownloadImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DownloadImg.h"; sourceTree = "<group>"; };
 		27540C891EC3618B00BBD2F6 /* UIImage+DownloadImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DownloadImg.m"; sourceTree = "<group>"; };
+		2775627E1EC5953200F98C73 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
+		2775627F1EC5953200F98C73 /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartItem.m; sourceTree = "<group>"; };
+		277562811EC59A4500F98C73 /* ShoppingCartUpdateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartUpdateProtocol.h; sourceTree = "<group>"; };
 		27B81B851EBC3BD400FE0C49 /* Salido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Salido.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B81B9C1EBC3BD400FE0C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		27B81BA11EBC3BD400FE0C49 /* SalidoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalidoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,7 @@
 				27083AA21EC01DA100D8D238 /* AccountManager.m */,
 				27BB672D1EC1EDDA00875B19 /* ShoppingCartManager.h */,
 				27BB672E1EC1EDDA00875B19 /* ShoppingCartManager.m */,
+				277562811EC59A4500F98C73 /* ShoppingCartUpdateProtocol.h */,
 			);
 			path = Stores;
 			sourceTree = "<group>";
@@ -197,6 +202,8 @@
 				27BB672B1EC1B96F00875B19 /* Category.m */,
 				27D7D3411EC1730B0044EFF3 /* Product.h */,
 				27D7D3421EC1730B0044EFF3 /* Product.m */,
+				2775627E1EC5953200F98C73 /* CartItem.h */,
+				2775627F1EC5953200F98C73 /* CartItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -477,6 +484,7 @@
 				27083AA71EC023FE00D8D238 /* CreateAccountVC.m in Sources */,
 				270413091EC3215C0050645B /* BaseWebService.m in Sources */,
 				27D7D33C1EC157E40044EFF3 /* ShoppingCartTableViewCell.m in Sources */,
+				277562801EC5953200F98C73 /* CartItem.m in Sources */,
 				27083AAD1EC0243100D8D238 /* SearchAccountsVC.m in Sources */,
 				27D7D3401EC16E000044EFF3 /* ProductDetailVC.m in Sources */,
 				27D7D3391EC157CA0044EFF3 /* FilterTableViewCell.m in Sources */,

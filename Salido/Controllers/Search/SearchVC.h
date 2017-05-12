@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "Product.h"
+#import "ShoppingCartUpdateProtocol.h"
 
-@interface SearchVC : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@interface SearchVC : UIViewController <UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, ShoppingCartUpdateDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UISearchBar *searchBar;
@@ -17,6 +18,7 @@
 @property (nonatomic, weak) IBOutlet UIButton *TBToggleFiltersBtn;
 @property (nonatomic, weak) IBOutlet UIButton *TBSearchBtn;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *TBSearchSpinner;
+@property (nonatomic, weak) IBOutlet UIButton *TBShoppingCartItemCountBtn;
 
 // member variables
 @property (atomic, strong) NSMutableArray<Product *> * productList; // array of Products returned from search
