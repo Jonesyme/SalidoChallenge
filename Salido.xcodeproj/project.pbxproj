@@ -23,6 +23,8 @@
 		272E3B7F1EBF63A10041F2DE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 272E3B7E1EBF63A10041F2DE /* LoginVC.m */; };
 		27540C8A1EC3618B00BBD2F6 /* UIImage+DownloadImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 27540C891EC3618B00BBD2F6 /* UIImage+DownloadImg.m */; };
 		277562801EC5953200F98C73 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2775627F1EC5953200F98C73 /* CartItem.m */; };
+		277562841EC5AAC700F98C73 /* NSNumber+CurrencyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 277562831EC5AAC700F98C73 /* NSNumber+CurrencyString.m */; };
+		277562871EC5ACAA00F98C73 /* ShoppingCartTotalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 277562861EC5ACAA00F98C73 /* ShoppingCartTotalCell.m */; };
 		27B81BA61EBC3BD400FE0C49 /* SalidoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 27B81BA51EBC3BD400FE0C49 /* SalidoTests.m */; };
 		27BB672A1EC1B95D00875B19 /* ResponseStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BB67291EC1B95D00875B19 /* ResponseStatus.m */; };
 		27BB672C1EC1B96F00875B19 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 27BB672B1EC1B96F00875B19 /* Category.m */; };
@@ -82,6 +84,10 @@
 		2775627E1EC5953200F98C73 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
 		2775627F1EC5953200F98C73 /* CartItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartItem.m; sourceTree = "<group>"; };
 		277562811EC59A4500F98C73 /* ShoppingCartUpdateProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShoppingCartUpdateProtocol.h; sourceTree = "<group>"; };
+		277562821EC5AAC700F98C73 /* NSNumber+CurrencyString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+CurrencyString.h"; sourceTree = "<group>"; };
+		277562831EC5AAC700F98C73 /* NSNumber+CurrencyString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+CurrencyString.m"; sourceTree = "<group>"; };
+		277562851EC5ACAA00F98C73 /* ShoppingCartTotalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCartTotalCell.h; sourceTree = "<group>"; };
+		277562861EC5ACAA00F98C73 /* ShoppingCartTotalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCartTotalCell.m; sourceTree = "<group>"; };
 		27B81B851EBC3BD400FE0C49 /* Salido.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Salido.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B81B9C1EBC3BD400FE0C49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		27B81BA11EBC3BD400FE0C49 /* SalidoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SalidoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +175,8 @@
 			children = (
 				27D7D33A1EC157E40044EFF3 /* ShoppingCartTableViewCell.h */,
 				27D7D33B1EC157E40044EFF3 /* ShoppingCartTableViewCell.m */,
+				277562851EC5ACAA00F98C73 /* ShoppingCartTotalCell.h */,
+				277562861EC5ACAA00F98C73 /* ShoppingCartTotalCell.m */,
 			);
 			path = Checkout;
 			sourceTree = "<group>";
@@ -287,6 +295,8 @@
 			children = (
 				27540C881EC3618B00BBD2F6 /* UIImage+DownloadImg.h */,
 				27540C891EC3618B00BBD2F6 /* UIImage+DownloadImg.m */,
+				277562821EC5AAC700F98C73 /* NSNumber+CurrencyString.h */,
+				277562831EC5AAC700F98C73 /* NSNumber+CurrencyString.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -472,6 +482,7 @@
 			files = (
 				27D7D3431EC1730B0044EFF3 /* Product.m in Sources */,
 				27083AB31EC0454E00D8D238 /* EmployeeTableViewCell.m in Sources */,
+				277562841EC5AAC700F98C73 /* NSNumber+CurrencyString.m in Sources */,
 				272E3B6C1EBF19140041F2DE /* JSONJoy.m in Sources */,
 				27D7D32C1EC157030044EFF3 /* ShoppingCartVC.m in Sources */,
 				27BB672F1EC1EDDA00875B19 /* ShoppingCartManager.m in Sources */,
@@ -493,6 +504,7 @@
 				27BB672C1EC1B96F00875B19 /* Category.m in Sources */,
 				27083AB61EC04D9100D8D238 /* Employee.m in Sources */,
 				27BB672A1EC1B95D00875B19 /* ResponseStatus.m in Sources */,
+				277562871EC5ACAA00F98C73 /* ShoppingCartTotalCell.m in Sources */,
 				27D7D3221EC156940044EFF3 /* FilterVC.m in Sources */,
 				272E3B7F1EBF63A10041F2DE /* LoginVC.m in Sources */,
 				27540C8A1EC3618B00BBD2F6 /* UIImage+DownloadImg.m in Sources */,

@@ -9,4 +9,8 @@
 #import "CartItem.h"
 
 @implementation CartItem
+
+-(NSNumber *)itemSubTotal {
+    return [NSNumber numberWithFloat:([_product.PriceRetail floatValue] * [_quantity floatValue])];
+}
 @end

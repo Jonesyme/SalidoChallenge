@@ -15,6 +15,7 @@
 #import "ProductDetailVC.h"
 #import "UIImage+DownloadImg.h"
 #import "ShoppingCartManager.h"
+#import "ShoppingCartVC.h"
 
 @interface SearchVC ()
 -(void)reloadTableView;
@@ -42,11 +43,11 @@
     [super viewWillAppear:animated];
     _TBSearchSpinner.hidden = true;
     _TBSearchBtn.hidden = false;
-    _TBShoppingCartItemCountBtn.titleLabel.text = [[[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount] stringValue];
 }
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [[ShoppingCartManager sharedInstance] setDelegate:self];
+    _TBShoppingCartItemCountBtn.titleLabel.text = [[[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount] stringValue];
 }
 -(void)viewDidDisappear:(BOOL)animated {
     [[ShoppingCartManager sharedInstance] setDelegate:nil];
@@ -96,8 +97,8 @@
 -(IBAction)toolbarShoppingCartBtnTapped:(id)sender {
     [_searchBar resignFirstResponder];
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ProductDetailVC * productDetailVC = (ProductDetailVC *)[storyboard instantiateViewControllerWithIdentifier:@"productDetailVC"];
-    [self.revealViewController.navigationController pushViewController:productDetailVC animated:true];
+    ShoppingCartVC * shoppingCartVC = (ShoppingCartVC *)[storyboard instantiateViewControllerWithIdentifier:@"shoppingCarVC"];
+    [self.revealViewController.navigationController pushViewController:shoppingCartVC animated:true];
 }
 -(IBAction)logoutBtnTapped:(id)sender {
     

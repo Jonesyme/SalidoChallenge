@@ -8,6 +8,7 @@
 
 #import "SearchTableViewCell.h"
 #import "ShoppingCartManager.h"
+#import "NSNumber+CurrencyString.h"
 
 @implementation SearchTableViewCell
 
@@ -20,7 +21,7 @@
 
 -(void)configureCellContent {
     _titleLbl.text = _product.Name;
-    _priceLbl.text = [_product getPriceCurrencyString];
+    _priceLbl.text = [_product.PriceRetail currencyFormattedString];
     
     _qtyLbl.text = @"1";
     _itemImageView.image = [UIImage imageNamed:@"productThumb"];

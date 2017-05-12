@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Product.h"
+#import "CartItem.h"
 
 @interface ShoppingCartTableViewCell : UITableViewCell
 @property (nonatomic, weak) IBOutlet UILabel *titleLbl;
@@ -16,8 +16,9 @@
 @property (nonatomic, weak) IBOutlet UIImageView *itemImageView;
 @property (nonatomic, weak) IBOutlet UIStepper *stepperCtrl;
 
-@property (atomic, weak) Product * product; // data model object
+@property (atomic, weak) CartItem * cartItem; // data model object
 
 -(void)configureCellContent;
+-(IBAction)deleteLineItem:(id)sender;
 
 @end

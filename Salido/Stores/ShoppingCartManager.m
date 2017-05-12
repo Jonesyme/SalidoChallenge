@@ -43,7 +43,6 @@
     for(CartItem * lineItem in _itemList) {
         if([lineItem.product.Id isEqualToNumber:product.Id]) {
             lineItem.quantity = [NSNumber numberWithInt:[lineItem.quantity intValue] + [quantity intValue]];
-            lineItem.itemPriceTotal = [NSNumber numberWithFloat:([lineItem.product.PriceRetail floatValue] * [quantity floatValue])];
             [_delegate shoppingCartHasBeenUpdated:self];
             return;
         }
@@ -52,7 +51,6 @@
     CartItem * item = [[CartItem alloc] init];
     item.product = product;
     item.quantity = quantity;
-    item.itemPriceTotal = [NSNumber numberWithFloat:([product.PriceRetail floatValue] * [quantity floatValue])];
     [_itemList addObject:item];
     [_delegate shoppingCartHasBeenUpdated:self];
     return;
@@ -67,7 +65,6 @@
                 itemToRemove = lineItem;
             } else {
                 lineItem.quantity = [NSNumber numberWithInt:[lineItem.quantity intValue] - [qtyToRemove intValue]];
-                lineItem.itemPriceTotal = [NSNumber numberWithFloat:([lineItem.product.PriceRetail floatValue] * [lineItem.quantity floatValue])];
             }
             break;
         }
@@ -86,7 +83,7 @@
 -(NSNumber *)fetchShoppingCartPriceTotal {
     float priceTotal = 0;
     for(CartItem * lineItem in _itemList) {
-        priceTotal += [lineItem.product.PriceRetail floatValue] * [lineItem.quantity floatValue];
+        priceTotal += [[lineItem itemSubTotal] floatValue];
     }
     return [NSNumber numberWithFloat:priceTotal];
 }

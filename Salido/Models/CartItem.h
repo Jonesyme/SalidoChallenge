@@ -15,5 +15,10 @@
 @interface CartItem : NSObject
 @property (atomic, strong) Product * product;
 @property (atomic, strong) NSNumber * quantity;
-@property (atomic, strong) NSNumber * itemPriceTotal;
+
+/**
+ Essentially product-Price * quantity
+ */
+-(NSNumber *)itemSubTotal;
+
 @end

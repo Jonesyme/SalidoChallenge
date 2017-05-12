@@ -7,6 +7,8 @@
 //
 
 #import "ShoppingCartTableViewCell.h"
+#import "ShoppingCartManager.h"
+#import "NSNumber+CurrencyString.h"
 
 @implementation ShoppingCartTableViewCell
 
@@ -15,9 +17,13 @@
 }
 
 -(void)configureCellContent {
-    _titleLbl.text = _product.Name;
-    _qtyLbl.text = @"1";
-    _priceLbl.text = @"19.99";
+    _titleLbl.text = _cartItem.product.Name;
+    _qtyLbl.text = [_cartItem.quantity stringValue];
+    _priceLbl.text = [[_cartItem itemSubTotal] currencyFormattedString];
     _itemImageView.image = [UIImage imageNamed:@"productThumb"];
+}
+
+-(IBAction)deleteLineItem:(id)sender {
+    [[ShoppingCartManager sharedInstance] removeLineItem:_cartItem.product.Id quantity:nil];
 }
 @end
