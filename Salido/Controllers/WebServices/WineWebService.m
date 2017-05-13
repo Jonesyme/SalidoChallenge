@@ -59,14 +59,19 @@
     [params setObject:_wineAPIKey forKey:@"apiKey"];
     [params setObject:@"50" forKey:@"size"];
     [params setObject:@"0" forKey:@"offset"];
-    
-    // category filter
-    NSString * categoryParam = [NSString stringWithFormat:@"categories(%@)", categoryFilter];
-    [params setObject:categoryParam forKey:@"filter"];
-    
+    [params setObject:@"name|ascending" forKey:@"sort"];
     if(searchStr!=nil)
-       [params setObject:searchStr forKey:@"search"];
-
+        [params setObject:searchStr forKey:@"search"];
+    [params setObject:@"NY" forKey:@"state"];
+    
+    // filters
+    NSArray * catFilters = [categoryFilter componentsSeparatedByString: @"+"];
+    if(catFilters!= nil && [catFilters count]>1) {
+        NSString * subCatFilter = catFilters[1];
+        NSString * filterStr = [NSString stringWithFormat:@"categories(490+%@)", subCatFilter];
+        [params setObject:filterStr forKey:@"filter"];
+    }
+    
     // perform network request
     [self asyncJSONRequestWithPath:@"catalog" parameters:params completion:^(NSDictionary *parsedJSONDict, NSError *error) {
         if(error!=nil ) {
@@ -81,3 +86,7 @@
 }
 
 @end
+
+
+
+

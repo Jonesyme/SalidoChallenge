@@ -10,6 +10,7 @@
 #import "AccountManager.h"
 #import "SearchVC.h"
 #import "SWRevealViewController.h"
+#import "ShoppingCartManager.h"
 
 @interface LoginVC ()
 @property (nonatomic, strong) AccountManager * accountManager;
@@ -39,12 +40,13 @@
             _messageLabel.textColor = [UIColor greenColor];
             [self animateLoginMessage:true completion:^void (BOOL finished) {
                 
+                // init new, empty shopping cart for session
+                [[ShoppingCartManager sharedInstance] emptyCart];
+                
                 // proceed to product-search view controller
                 UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                 SWRevealViewController * revealViewController = (SWRevealViewController *)[storyboard instantiateViewControllerWithIdentifier:@"revealVC"];
                 [self.navigationController pushViewController:revealViewController animated:true];
-                //SearchVC * searchVC = (SearchVC *)[storyboard instantiateViewControllerWithIdentifier:@"SearchVC"];
-                //[self.navigationController pushViewController:searchVC animated:true];
             }];
         } else {
             // no match found, notify user

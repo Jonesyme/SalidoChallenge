@@ -2,7 +2,8 @@
 iOS Coding Challenge
 Author: Mike Jones
 
-From a technical stand-point, the challenge was not overtly difficult or complex but the sheer number of custom views and tables required to achieve the full feature set was quite large - at least, in my experience.  Given another 48 hours I would be happy to finish out the features but in the interest of time I have reduced the scope to the features outlined below.  If you have any questions or you'd like to see me code a feature that's not in the current solution, don't be afraid to ask.
+## Update: May 12, 2017
+Requested changes committed to the "ShoppingCart" branch.  Shopping Cart functionality is now fully working - including the ability to increment/decrement item quantities from the search screen and the shopping cart screen.  Category filters are also working and the results are pre-sorted by product name.  NOTE: I made the ShoppingCart a singleton for simplicity purposes.  In a production app I would generally try to avoid the use of singletons if possible and retain references to the object only by those views that require it. Just FYI - I'm generally not a big proponent of singletons...  
 
 ## Compilation Notes
 - Compiles on: XCode 8.3.2
@@ -19,9 +20,9 @@ From a technical stand-point, the challenge was not overtly difficult or complex
 - The Wine Search and Filter Screen
     - Tap filter button to filter by any Category using slide-out menu
     - Use the search bar to query wines via text
+- The Shopping Cart screen
 
 ## Whats Not fully complete
-- All shopping cart functionality
 - Sorting/paging of search results
 - Query employee PIN via email
 - Unit Tests

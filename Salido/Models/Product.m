@@ -20,7 +20,17 @@
 @end
 
 #pragma mark - Sub-Product Mappings
+@implementation ProductAppellationRegion : NSObject
+@end
+@implementation ProductAppellation : NSObject
+@end
 @implementation ProductLabel : NSObject
+@end
+@implementation ProductVarietalWineType : NSObject
+@end
+@implementation ProductVarietal : NSObject
+@end
+@implementation ProductVineyard : NSObject
 @end
 @implementation ProductAttribute : NSObject
 @end

@@ -14,6 +14,9 @@
 #import "FilterVC.h"
 #import "ProductDetailVC.h"
 #import "UIImage+DownloadImg.h"
+#import "ShoppingCartManager.h"
+#import "ShoppingCartVC.h"
+#import "ProductDetailVC.h"
 
 @interface SearchVC ()
 -(void)reloadTableView;
@@ -41,7 +44,17 @@
     [super viewWillAppear:animated];
     _TBSearchSpinner.hidden = true;
     _TBSearchBtn.hidden = false;
+    [_TBShoppingCartItemCountBtn setTitle:[[[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount] stringValue] forState:UIControlStateNormal];
 }
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[ShoppingCartManager sharedInstance] setDelegate:self];
+}
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[ShoppingCartManager sharedInstance] setDelegate:nil];
+}
+
 -(void)executeSearchQuery {
     // show activity spinner
     [_searchBar resignFirstResponder];
@@ -86,13 +99,12 @@
 -(IBAction)toolbarShoppingCartBtnTapped:(id)sender {
     [_searchBar resignFirstResponder];
     UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    ProductDetailVC * productDetailVC = (ProductDetailVC *)[storyboard instantiateViewControllerWithIdentifier:@"productDetailVC"];
-    [self.revealViewController.navigationController pushViewController:productDetailVC animated:true];
+    ShoppingCartVC * shoppingCartVC = (ShoppingCartVC *)[storyboard instantiateViewControllerWithIdentifier:@"shoppingCarVC"];
+    [self.revealViewController.navigationController pushViewController:shoppingCartVC animated:true];
 }
 -(IBAction)logoutBtnTapped:(id)sender {
     
 }
-
 #
 #pragma mark - Table view data source
 #
@@ -123,7 +135,13 @@
     }
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // show product detail view
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ProductDetailVC * productDetailVC = (ProductDetailVC *)[storyboard instantiateViewControllerWithIdentifier:@"productDetailVC"];
+    [productDetailVC setProduct:[_productList objectAtIndex:indexPath.row]];
+    [self.revealViewController.navigationController pushViewController:productDetailVC animated:true];
+}
 
 #
 #pragma mark - UISearchBarDelegate
@@ -138,4 +156,9 @@
     [self executeSearchQuery];
 }
 
+#pragma mark - ShoppingCartUpdateDelegate
+-(void)shoppingCartHasBeenUpdated:(ShoppingCartManager *)shoppingCartManager {
+    NSNumber * productCount = [[ShoppingCartManager sharedInstance] fetchShoppingCartItemCount];
+    [_TBShoppingCartItemCountBtn setTitle:[productCount stringValue] forState:UIControlStateNormal];
+}
 @end

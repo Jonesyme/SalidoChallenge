@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ShoppingCartUpdateProtocol.h"
 
-@interface ShoppingCartVC : UITableViewController
+@interface ShoppingCartVC : UITableViewController <ShoppingCartUpdateDelegate>
 
 @end
