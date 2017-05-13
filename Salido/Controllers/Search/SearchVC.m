@@ -16,6 +16,7 @@
 #import "UIImage+DownloadImg.h"
 #import "ShoppingCartManager.h"
 #import "ShoppingCartVC.h"
+#import "ProductDetailVC.h"
 
 @interface SearchVC ()
 -(void)reloadTableView;
@@ -134,7 +135,13 @@
     }
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    // show product detail view
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ProductDetailVC * productDetailVC = (ProductDetailVC *)[storyboard instantiateViewControllerWithIdentifier:@"productDetailVC"];
+    [productDetailVC setProduct:[_productList objectAtIndex:indexPath.row]];
+    [self.revealViewController.navigationController pushViewController:productDetailVC animated:true];
+}
 
 #
 #pragma mark - UISearchBarDelegate

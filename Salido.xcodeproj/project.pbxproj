@@ -21,6 +21,7 @@
 		272E3B6C1EBF19140041F2DE /* JSONJoy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272E3B6B1EBF19140041F2DE /* JSONJoy.m */; };
 		272E3B7A1EBF4F900041F2DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272E3B781EBF4F900041F2DE /* Main.storyboard */; };
 		272E3B7F1EBF63A10041F2DE /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 272E3B7E1EBF63A10041F2DE /* LoginVC.m */; };
+		2732755D1EC74FCD00BF4998 /* ProductDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2732755C1EC74FCD00BF4998 /* ProductDetailTableViewCell.m */; };
 		27540C8A1EC3618B00BBD2F6 /* UIImage+DownloadImg.m in Sources */ = {isa = PBXBuildFile; fileRef = 27540C891EC3618B00BBD2F6 /* UIImage+DownloadImg.m */; };
 		277562801EC5953200F98C73 /* CartItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2775627F1EC5953200F98C73 /* CartItem.m */; };
 		277562841EC5AAC700F98C73 /* NSNumber+CurrencyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 277562831EC5AAC700F98C73 /* NSNumber+CurrencyString.m */; };
@@ -78,6 +79,9 @@
 		272E3B791EBF4F900041F2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		272E3B7D1EBF63A10041F2DE /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		272E3B7E1EBF63A10041F2DE /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
+		2732755B1EC74FCD00BF4998 /* ProductDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailTableViewCell.h; sourceTree = "<group>"; };
+		2732755C1EC74FCD00BF4998 /* ProductDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailTableViewCell.m; sourceTree = "<group>"; };
+		2732755E1EC751B700BF4998 /* headers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = headers.h; sourceTree = "<group>"; };
 		27540C881EC3618B00BBD2F6 /* UIImage+DownloadImg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DownloadImg.h"; sourceTree = "<group>"; };
 		27540C891EC3618B00BBD2F6 /* UIImage+DownloadImg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DownloadImg.m"; sourceTree = "<group>"; };
 		2775627E1EC5953200F98C73 /* CartItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItem.h; sourceTree = "<group>"; };
@@ -149,10 +153,12 @@
 		27083AAE1EC0453000D8D238 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				27D7D3341EC157B40044EFF3 /* SearchTableViewCell.h */,
-				27D7D3351EC157B40044EFF3 /* SearchTableViewCell.m */,
 				27D7D3371EC157CA0044EFF3 /* FilterTableViewCell.h */,
 				27D7D3381EC157CA0044EFF3 /* FilterTableViewCell.m */,
+				2732755B1EC74FCD00BF4998 /* ProductDetailTableViewCell.h */,
+				2732755C1EC74FCD00BF4998 /* ProductDetailTableViewCell.m */,
+				27D7D3341EC157B40044EFF3 /* SearchTableViewCell.h */,
+				27D7D3351EC157B40044EFF3 /* SearchTableViewCell.m */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				272E3B5F1EBF18010041F2DE /* AppDelegate.m */,
 				27B81B9C1EBC3BD400FE0C49 /* Info.plist */,
 				272E3B601EBF18010041F2DE /* main.m */,
+				2732755E1EC751B700BF4998 /* headers.h */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -501,6 +508,7 @@
 				277562871EC5ACAA00F98C73 /* ShoppingCartTotalCell.m in Sources */,
 				27D7D3221EC156940044EFF3 /* FilterVC.m in Sources */,
 				272E3B7F1EBF63A10041F2DE /* LoginVC.m in Sources */,
+				2732755D1EC74FCD00BF4998 /* ProductDetailTableViewCell.m in Sources */,
 				27540C8A1EC3618B00BBD2F6 /* UIImage+DownloadImg.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
