@@ -2,8 +2,11 @@
 iOS Coding Challenge
 Author: Mike Jones
 
+## Update: May 13, 2017 - 12:00 PM
+Finished out the Product Detail screen. 
+
 ## Update: May 12, 2017
-Requested changes committed to the "ShoppingCart" branch.  Shopping Cart functionality is now fully working - including the ability to increment/decrement item quantities from the search screen and the shopping cart screen.  Category filters are also working and the results are pre-sorted by product name.  NOTE: I made the ShoppingCart a singleton for simplicity purposes.  In a production app I would generally try to avoid the use of singletons if possible and retain references to the object only by those views that require it. Just FYI - I'm generally not a big proponent of singletons...  
+Requested changes committed to the "ShoppingCart" branch.  Shopping Cart functionality is now fully working - including the ability to increment/decrement item quantities from the search screen and the shopping cart screen.  Category filters are also working and the results are pre-sorted by product name. 
 
 ## Compilation Notes
 - Compiles on: XCode 8.3.2
@@ -21,8 +24,9 @@ Requested changes committed to the "ShoppingCart" branch.  Shopping Cart functio
     - Tap filter button to filter by any Category using slide-out menu
     - Use the search bar to query wines via text
 - The Shopping Cart screen
+- Product Detail Screen
 
-## Whats Not fully complete
+## Whats Not Fully Complete
 - Sorting/paging of search results
 - Query employee PIN via email
 - Unit Tests
