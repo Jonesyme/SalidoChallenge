@@ -8,6 +8,8 @@
 - **Target iOS SDK:** iOS 10.3
 - **Original Completion Date:** May 13, 2017
 
+**Important Note:** This app was built to use a remote web-service API that is no longer available for public use. The app will compile but no longer functions as originally intended.
+
 ### What Features are Working
 - Almost all the Employee Account/PIN features
     - Create account
